@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Responsive Web Applications: A Modern Approach - Gabriel McKinsey</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        
+        .article-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        
+        .article-content {
+            line-height: 1.8;
+            color: #374151;
+        }
+        
+        .article-content h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin: 2rem 0 1rem 0;
+            padding-top: 1rem;
+        }
+        
+        .article-content h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin: 1.5rem 0 0.5rem 0;
+        }
+        
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .article-content ul, .article-content ol {
+            margin: 1rem 0 1.5rem 2rem;
+        }
+        
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .code-block {
+            background: #f8fafc;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+            border-left: 4px solid #2563eb;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            transition: color 0.3s ease;
+        }
+        
+        .back-link:hover {
+            color: #1d4ed8;
+        }
+        
+        .article-footer {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid #e5e7eb;
+            text-align: center;
+        }
+        
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .share-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 8px 16px;
+            background: #f3f4f6;
+            color: #374151;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .share-btn:hover {
+            background: #2563eb;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">Gabriel McKinsey</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="../index.html#home" class="nav-link">Home</a>
+                <a href="../index.html#about" class="nav-link">About</a>
+                <a href="../index.html#projects" class="nav-link">Projects</a>
+                <a href="../index.html#blog" class="nav-link">Blog</a>
+                <a href="../index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <a href="../index.html#blog" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            Back to Blog
+        </a>
+        
+        <article class="article-container">
+            <header class="article-header">
+                <h1 class="article-title">Building Responsive Web Applications: A Modern Approach</h1>
+                <div class="article-meta">
+                    <span><i class="fas fa-calendar"></i> December 15, 2024</span>
+                    <span><i class="fas fa-clock"></i> 8 min read</span>
+                    <span><i class="fas fa-tag"></i> Development</span>
+                </div>
+            </header>
+            
+            <div class="article-content">
+                <p>In today's digital landscape, creating responsive web applications isn't just a nice-to-have feature—it's an absolute necessity. With users accessing websites from devices ranging from 320px wide smartphones to 4K desktop monitors, developers must ensure their applications provide an optimal experience across all screen sizes.</p>
+                
+                <p>This comprehensive guide will walk you through modern techniques for building truly responsive web applications, covering everything from CSS Grid and Flexbox to performance optimization and accessibility considerations.</p>
+                
+                <h2>The Foundation: Mobile-First Design</h2>
+                
+                <p>The mobile-first approach is more than just a buzzword—it's a fundamental shift in how we think about web design. By starting with the smallest screen size and progressively enhancing for larger devices, we ensure that our applications work well on all devices while maintaining optimal performance.</p>
+                
+                <div class="highlight-box">
+                    <strong>Pro Tip:</strong> Always design for mobile first, then use media queries to enhance the experience for larger screens. This approach ensures better performance and a more robust design.
+                </div>
+                
+                <h3>CSS Grid: The Modern Layout System</h3>
+                
+                <p>CSS Grid has revolutionized how we create layouts. Unlike Flexbox, which is primarily for one-dimensional layouts, Grid excels at two-dimensional layouts, making it perfect for complex responsive designs.</p>
+                
+                <div class="code-block">
+/* Basic CSS Grid Layout */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+                </div>
+                
+                <h3>Flexbox: Perfect for Component Layouts</h3>
+                
+                <p>While Grid handles overall page layout, Flexbox is ideal for component-level layouts. It's particularly useful for navigation bars, card content, and form layouts.</p>
+                
+                <div class="code-block">
+/* Flexible Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+                </div>
+                
+                <h2>Responsive Typography and Spacing</h2>
+                
+                <p>Typography and spacing are crucial elements that often get overlooked in responsive design. Using relative units and fluid typography ensures your text remains readable and well-proportioned across all devices.</p>
+                
+                <h3>Fluid Typography with clamp()</h3>
+                
+                <p>The CSS <code>clamp()</code> function allows you to set a minimum, preferred, and maximum value for font sizes, creating truly fluid typography that scales smoothly between breakpoints.</p>
+                
+                <div class="code-block">
+/* Fluid Typography */
+h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.2;
+}
+
+p {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    line-height: 1.6;
+}
+                </div>
+                
+                <h2>Performance Optimization</h2>
+                
+                <p>Responsive design isn't just about layout—it's also about performance. Users on mobile devices often have slower connections and less powerful hardware, making optimization crucial.</p>
+                
+                <h3>Image Optimization</h3>
+                
+                <p>Images are often the largest assets on a webpage. Using responsive images with the <code>srcset</code> attribute ensures users download appropriately sized images for their device.</p>
+                
+                <div class="code-block">
+&lt;img 
+    src="image-800w.jpg" 
+    srcset="image-400w.jpg 400w, 
+            image-800w.jpg 800w, 
+            image-1200w.jpg 1200w"
+    sizes="(max-width: 400px) 100vw, 
+           (max-width: 800px) 50vw, 
+           25vw"
+    alt="Responsive image example"
+&gt;
+                </div>
+                
+                <h3>Lazy Loading</h3>
+                
+                <p>Implementing lazy loading for images and other non-critical resources can significantly improve initial page load times, especially on mobile devices.</p>
+                
+                <div class="code-block">
+/* Lazy loading with Intersection Observer */
+const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
+        }
+    });
+});
+
+document.querySelectorAll('img[data-src]').forEach(img => {
+    imageObserver.observe(img);
+});
+                </div>
+                
+                <h2>Accessibility in Responsive Design</h2>
+                
+                <p>Responsive design and accessibility go hand in hand. Ensuring your application is usable by people with disabilities should be a core consideration in your responsive design strategy.</p>
+                
+                <h3>Touch-Friendly Interfaces</h3>
+                
+                <p>Mobile devices rely on touch input, so interactive elements should be large enough to tap comfortably. The recommended minimum touch target size is 44px × 44px.</p>
+                
+                <div class="code-block">
+/* Touch-friendly buttons */
+.button {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px; /* Prevents zoom on iOS */
+}
+                </div>
+                
+                <h2>Testing and Debugging</h2>
+                
+                <p>Testing responsive designs across different devices and browsers is essential. Here are some tools and techniques to help you ensure your application works everywhere:</p>
+                
+                <ul>
+                    <li><strong>Browser DevTools:</strong> Use the device emulation features to test different screen sizes</li>
+                    <li><strong>Real Device Testing:</strong> Test on actual devices when possible</li>
+                    <li><strong>Cross-Browser Testing:</strong> Ensure compatibility across different browsers</li>
+                    <li><strong>Performance Testing:</strong> Use tools like Lighthouse to measure performance</li>
+                </ul>
+                
+                <h2>Conclusion</h2>
+                
+                <p>Building responsive web applications requires a combination of modern CSS techniques, performance optimization, and accessibility considerations. By following the mobile-first approach and leveraging tools like CSS Grid, Flexbox, and fluid typography, you can create applications that provide an excellent user experience across all devices.</p>
+                
+                <p>Remember that responsive design is an ongoing process. As new devices and screen sizes emerge, your applications should continue to adapt and evolve. Stay updated with the latest web standards and best practices to ensure your applications remain relevant and performant.</p>
+                
+                <p>What are your favorite responsive design techniques? Share your thoughts and experiences in the comments below!</p>
+            </div>
+            
+            <footer class="article-footer">
+                <p>Thanks for reading! If you found this article helpful, please consider sharing it.</p>
+                <div class="share-buttons">
+                    <a href="#" class="share-btn">
+                        <i class="fab fa-twitter"></i>
+                        Share on Twitter
+                    </a>
+                    <a href="#" class="share-btn">
+                        <i class="fab fa-linkedin"></i>
+                        Share on LinkedIn
+                    </a>
+                    <a href="#" class="share-btn">
+                        <i class="fab fa-facebook"></i>
+                        Share on Facebook
+                    </a>
+                </div>
+            </footer>
+        </article>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Gabriel McKinsey. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
