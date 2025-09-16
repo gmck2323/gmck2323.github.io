@@ -17,9 +17,9 @@
             </div>
             <div class="nav-menu" id="nav-menu">
                 <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#projects" class="nav-link">Projects</a>
+                <!-- <a href="#projects" class="nav-link">Projects</a> -->
                 <a href="#blog" class="nav-link">Blog</a>
+                <a href="#about" class="nav-link">About</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
             <div class="nav-toggle" id="nav-toggle">
@@ -35,19 +35,45 @@
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">Hello, I'm <span class="highlight">Gabriel McKinsey</span></h1>
-                <p class="hero-subtitle">Full-Stack Developer & Creative Problem Solver</p>
+                <p class="hero-subtitle">Senior Engineer specializing in AI, Data, and Product Systems — building resilient solutions at scale.</p>
                 <p class="hero-description">
-                    I build beautiful, functional web applications and love sharing my journey through code.
+                    My focus is building solutions that help people and organizations.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#projects" class="btn btn-primary">Read Articles</a>
                     <a href="#contact" class="btn btn-secondary">Get In Touch</a>
                 </div>
             </div>
             <div class="hero-image">
                 <div class="hero-avatar">
-                    <i class="fas fa-user-circle"></i>
+                    <img src="avatar.png" alt="Data Waves" class="hero-img">
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2 class="section-title">Latest Articles</h2>
+            <div class="blog-grid">
+                <article class="blog-card featured">
+                    <div class="blog-image">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">September 15, 2025</span>
+                            <span class="blog-category">AI</span>
+                        </div>
+                        <h3 class="blog-title">Markdown Files as Effective Memory for AI Agents</h3>
+                        <p class="blog-excerpt">
+                            Why plain Markdown + Git is a powerful, transparent, and lightweight alternative 
+                            to vector databases for agent memory — with real-world examples and practices.
+                        </p>
+                        <a href="blog/markdown-files-as-effective-memory-for-ai-agents.html" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -59,25 +85,30 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        I'm a passionate developer with a love for creating elegant solutions to complex problems. 
-                        With experience in both frontend and backend technologies, I enjoy building full-stack 
-                        applications that make a difference.
+                        As a Senior Engineer, I specialize in AI, Data, and Product Systems, focusing on building 
+                        resilient solutions at scale. My passion lies in creating technology that genuinely helps 
+                        people and organizations solve real-world problems.
                     </p>
                     <p>
-                        When I'm not coding, you can find me exploring new technologies, contributing to open source 
-                        projects, or writing about my development journey.
+                        I work across the full spectrum of modern development, from designing agentic architectures 
+                        and optimizing data pipelines to building responsive user interfaces. My approach combines 
+                        technical excellence with a deep understanding of how systems impact users and business outcomes.
+                    </p>
+                    <p>
+                        When I'm not building solutions, you'll find me exploring emerging technologies, sharing 
+                        insights through writing, and contributing to the developer community.
                     </p>
                     <div class="skills">
                         <h3>Technologies I Work With</h3>
                         <div class="skills-grid">
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">React</span>
-                            <span class="skill-tag">Node.js</span>
                             <span class="skill-tag">Python</span>
                             <span class="skill-tag">TypeScript</span>
-                            <span class="skill-tag">CSS3</span>
-                            <span class="skill-tag">HTML5</span>
-                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Cloud platforms</span>
+                            <span class="skill-tag">Database design & optimization</span>
+                            <span class="skill-tag">Agentic Architecture</span>
+                            <span class="skill-tag">ETL & Data Pipelines</span>
                         </div>
                     </div>
                 </div>
@@ -86,7 +117,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <!-- <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
@@ -148,69 +179,7 @@
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog" class="blog">
-        <div class="container">
-            <h2 class="section-title">Latest Articles</h2>
-            <div class="blog-grid">
-                <article class="blog-card featured">
-                    <div class="blog-image">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">December 15, 2024</span>
-                            <span class="blog-category">Development</span>
-                        </div>
-                        <h3 class="blog-title">Building Responsive Web Applications: A Modern Approach</h3>
-                        <p class="blog-excerpt">
-                            Learn how to create truly responsive web applications that work seamlessly across all devices. 
-                            This comprehensive guide covers modern CSS techniques, flexible layouts, and performance optimization strategies.
-                        </p>
-                        <a href="blog/building-responsive-web-applications.html" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">December 10, 2024</span>
-                            <span class="blog-category">Technology</span>
-                        </div>
-                        <h3 class="blog-title">The Future of Web Development: Trends to Watch</h3>
-                        <p class="blog-excerpt">
-                            Exploring emerging technologies and trends that are shaping the future of web development, 
-                            from AI integration to progressive web apps.
-                        </p>
-                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">December 5, 2024</span>
-                            <span class="blog-category">Tools</span>
-                        </div>
-                        <h3 class="blog-title">Essential Developer Tools for 2024</h3>
-                        <p class="blog-excerpt">
-                            A curated list of must-have tools and extensions that can boost your productivity 
-                            and improve your development workflow.
-                        </p>
-                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
+    </section> -->
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
@@ -220,21 +189,13 @@
                 <div class="contact-info">
                     <p>I'm always interested in new opportunities and exciting projects. Let's connect!</p>
                     <div class="contact-links">
-                        <a href="mailto:your.email@example.com" class="contact-link">
+                        <a href="mailto:gabrielmckinsey1@gmail.com" class="contact-link">
                             <i class="fas fa-envelope"></i>
-                            your.email@example.com
+                            Email
                         </a>
-                        <a href="https://github.com/yourusername" class="contact-link">
+                        <a href="https://github.com/gmck2323" class="contact-link">
                             <i class="fab fa-github"></i>
                             GitHub
-                        </a>
-                        <a href="https://linkedin.com/in/yourprofile" class="contact-link">
-                            <i class="fab fa-linkedin"></i>
-                            LinkedIn
-                        </a>
-                        <a href="https://twitter.com/yourusername" class="contact-link">
-                            <i class="fab fa-twitter"></i>
-                            Twitter
                         </a>
                     </div>
                 </div>
@@ -245,7 +206,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Gabriel McKinsey. All rights reserved.</p>
+            <p>&copy; 2025 Gabriel McKinsey. All rights reserved.</p>
         </div>
     </footer>
 
